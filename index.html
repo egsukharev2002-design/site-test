@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мой сайт / My Site</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Привет, мир! / Hello, world!</h1>
+      <nav>
+        <a href="#about">О сайте / About</a>
+        <a href="#contact">Контакты / Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="about">
+        <h2>О сайте / About</h2>
+        <p>Этот сайт сделан на чистых HTML, CSS и JavaScript без конструкторов.</p>
+        <p>This site uses plain HTML, CSS, and JavaScript—no builders.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Контакты / Contact</h2>
+        <form id="contactForm">
+          <label>Ваш email / Your email
+            <input type="email" name="email" required>
+          </label>
+          <label>Сообщение / Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Отправить / Send</button>
+        </form>
+        <p class="muted">* Это демо-форма. На GitHub Pages данные никуда не отправятся.</p>
+      </section>
+    </main>
+
+    <footer class="container">
+      <small>&copy; <span id="year"></span> Вы / You</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
