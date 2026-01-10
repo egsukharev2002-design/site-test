@@ -3,45 +3,93 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Мой сайт / My Site</title>
+    <title>Портфолио — Ваше имя</title>
     <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Портфолио: работы, навыки и контакты." />
   </head>
   <body>
-    <header class="container">
-      <h1>Привет, мир! / Hello, world!</h1>
-      <nav>
-        <a href="#about">О сайте / About</a>
-        <a href="#contact">Контакты / Contact</a>
-      </nav>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#home">Ваше имя</a>
+        <nav class="menu">
+          <a href="#work">Портфолио</a>
+          <a href="#about">О себе</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="container">
-      <section id="about">
-        <h2>О сайте / About</h2>
-        <p>Этот сайт сделан на чистых HTML, CSS и JavaScript без конструкторов.</p>
-        <p>This site uses plain HTML, CSS, and JavaScript—no builders.</p>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="section hero container">
+        <h1>Я — <span class="accent">дизайнер</span> / автор визуальных проектов</h1>
+        <p class="lead">UX/UI · motion · web. Чётко, минималистично, только важное.</p>
+        <div class="cta">
+          <a class="btn" href="#work">Смотреть портфолио</a>
+          <a class="btn ghost" href="#contact">Связаться</a>
+        </div>
       </section>
 
-      <section id="contact">
-        <h2>Контакты / Contact</h2>
-        <form id="contactForm">
-          <label>Ваш email / Your email
+      <!-- WORKS -->
+      <section id="work" class="section container">
+        <h2>Портфолио</h2>
+        <p class="muted">Добавляйте сюда свои изображения и видео. Карточки ниже — примеры.</p>
+
+        <div class="grid">
+          <!-- КАРТОЧКА ИЗОБРАЖЕНИЯ -->
+          <article class="card">
+            <a href="assets/work-1.jpg" data-type="image">
+              <img src="assets/work-1.jpg" alt="Название проекта" loading="lazy">
+            </a>
+            <div class="card-meta">
+              <h3>Название проекта</h3>
+              <span class="tag">UI/UX</span>
+            </div>
+          </article>
+
+          <!-- КАРТОЧКА ВИДЕО (mp4) -->
+          <article class="card">
+            <a href="assets/reel-1.mp4" data-type="video">
+              <video src="assets/reel-1.mp4" muted preload="metadata" loading="lazy"></video>
+            </a>
+            <div class="card-meta">
+              <h3>Showreel 00:15</h3>
+              <span class="tag">Motion</span>
+            </div>
+          </article>
+
+          <!-- ДУБЛИРУЙТЕ БЛОКИ ARTICLE ДЛЯ НОВЫХ РАБОТ -->
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section container">
+        <h2>О себе</h2>
+        <p>Коротко: 2–3 предложения, чем вы занимаетесь и в чём сильны. Никакой «воды» — только факты и ценность.</p>
+        <ul class="skills">
+          <li>Figma</li><li>After Effects</li><li>Photoshop</li>
+          <li>HTML/CSS</li><li>JavaScript</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section container">
+        <h2>Контакты</h2>
+        <ul class="links">
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><a href="https://t.me/yourhandle" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://www.behance.net/your" target="_blank" rel="noopener">Behance</a></li>
+          <li><a href="https://github.com/your" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+
+        <!-- простая форма: заменим на Formspree позже -->
+        <form id="contactForm" class="contact-form">
+          <label>Ваш email
             <input type="email" name="email" required>
           </label>
-          <label>Сообщение / Message
-            <textarea name="message" rows="5" required></textarea>
+          <label>Сообщение
+            <textarea name="message" rows="4" required></textarea>
           </label>
-          <button type="submit">Отправить / Send</button>
-        </form>
-        <p class="muted">* Это демо-форма. На GitHub Pages данные никуда не отправятся.</p>
-      </section>
-    </main>
+          <button type="submit" class="btn">Отправить</button>
+          <p class="muted">Демо-форма. Подключим от
 
-    <footer class="container">
-      <small>&copy; <span id="year"></span> Вы / You</small>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
-1
