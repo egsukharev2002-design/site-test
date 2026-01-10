@@ -66,3 +66,10 @@ input,textarea{width:100%;background:#2F2F2F;color:var(--text);
 
 /* ========= ПОДВАЛ / FOOTER ========= */
 .footer{border-top:1px solid var(--brd);padding:2rem 0;color:var(--muted)}
+.card { transition: transform .15s ease; }
+.card:hover { transform: translateY(-2px); }
+
+.card video.preview {
+  width: 100%; height: 200px; object-fit: cover; border-radius: 10px; display: block;
+  background: #000;              /* чёрный фон, пока грузится превью */
+}
