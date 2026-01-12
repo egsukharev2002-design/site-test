@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Портфолио — Ваше имя</title>
-  <meta name="description" content="Портфолио: работы, навыки и контакты." />
+  <title>Egor Sukharev — Motion designer</title>
+  <meta name="description" content="Портфолио Egor Sukharev, motion designer: кейсы, навыки и контакты." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ШАПКА -->
   <header class="header">
     <nav class="container row">
-      <a class="brand" href="#home">Ваше имя</a>
+      <a class="brand" href="#home">Egor Sukharev</a>
       <div class="menu">
         <a href="#work">Портфолио</a>
         <a href="#about">О себе</a>
@@ -23,12 +23,23 @@
   <main>
     <!-- ГЛАВНАЯ -->
     <section id="home" class="section container">
-      <h1>Я — <span class="accent">дизайнер</span> / автор визуальных проектов</h1>
-      <p class="muted">UX/UI · motion · web. Только важное.</p>
-      <p class="gap-sm">
-        <a class="btn" href="#work">Смотреть портфолио</a>
-        <a class="btn ghost" href="#contact">Связаться</a>
-      </p>
+      <div class="hero-head">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-text">
+          <h1>Egor Sukharev — <span class="accent">motion designer</span></h1>
+          <p class="muted role">Motion designer</p>
+          <p class="muted hero-desc">
+            Делаю анимацию, которая помогает продукту говорить понятнее.<br>
+            Собираю сложные смыслы в простые визуальные сценарии.<br>
+            Работаю с брендами и сервисами, ориентированными на цифровую среду.<br>
+            Люблю аккуратные интерфейсы и честный, чистый визуал.
+          </p>
+          <p class="gap-sm">
+            <a class="btn" href="#work">Смотреть портфолио</a>
+            <a class="btn ghost" href="#contact">Связаться</a>
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- ПОРТФОЛИО: 6 карточек -->
@@ -37,7 +48,7 @@
       <p class="muted">Наведи — превью играет. Клик — откроет видео в новой вкладке.</p>
 
       <div class="grid">
-        <!-- 1. РЕАЛЬНЫЙ ПРОЕКТ (уже есть видео в assets) -->
+        <!-- 1. РЕАЛЬНЫЙ ПРОЕКТ -->
         <article class="card">
           <a href="assets/project-1-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
@@ -48,138 +59,60 @@
           <span class="tag">UI/UX</span>
         </article>
 
-        <!-- 2. ЗАГЛУШКА ПОД БУДУЩЕЕ ВИДЕО -->
+        <!-- 2–6. ЗАГЛУШКИ ПОД БУДУЩИЕ ВИДЕО -->
         <article class="card">
           <a href="assets/project-2-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
               src="assets/project-2-preview.mp4"
-              poster="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
-                <rect width='100%' height='100%' fill='%23222222'/>
-                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                      fill='%23cccccc' font-size='24'>
-                  Добавьте project-2-preview.mp4 в assets
-                </text>
-              </svg>"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-2-preview.mp4 в assets</text></svg>"
               muted playsinline preload="metadata"></video>
           </a>
           <h3 class="card-title">Проект 2</h3>
           <span class="tag">Motion</span>
         </article>
 
-        <!-- 3. ЗАГЛУШКА -->
         <article class="card">
           <a href="assets/project-3-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
               src="assets/project-3-preview.mp4"
-              poster="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
-                <rect width='100%' height='100%' fill='%23222222'/>
-                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                      fill='%23cccccc' font-size='24'>
-                  Добавьте project-3-preview.mp4 в assets
-                </text>
-              </svg>"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-3-preview.mp4 в assets</text></svg>"
               muted playsinline preload="metadata"></video>
           </a>
           <h3 class="card-title">Проект 3</h3>
           <span class="tag">Branding</span>
         </article>
 
-        <!-- 4. ЗАГЛУШКА -->
         <article class="card">
           <a href="assets/project-4-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
               src="assets/project-4-preview.mp4"
-              poster="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
-                <rect width='100%' height='100%' fill='%23222222'/>
-                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                      fill='%23cccccc' font-size='24'>
-                  Добавьте project-4-preview.mp4 в assets
-                </text>
-              </svg>"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-4-preview.mp4 в assets</text></svg>"
               muted playsinline preload="metadata"></video>
           </a>
           <h3 class="card-title">Проект 4</h3>
           <span class="tag">Web</span>
         </article>
 
-        <!-- 5. ЗАГЛУШКА -->
         <article class="card">
           <a href="assets/project-5-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
               src="assets/project-5-preview.mp4"
-              poster="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
-                <rect width='100%' height='100%' fill='%23222222'/>
-                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                      fill='%23cccccc' font-size='24'>
-                  Добавьте project-5-preview.mp4 в assets
-                </text>
-              </svg>"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-5-preview.mp4 в assets</text></svg>"
               muted playsinline preload="metadata"></video>
           </a>
           <h3 class="card-title">Проект 5</h3>
           <span class="tag">3D</span>
         </article>
 
-        <!-- 6. ЗАГЛУШКА -->
         <article class="card">
           <a href="assets/project-6-preview.mp4" target="_blank" rel="noopener">
             <video class="preview"
               src="assets/project-6-preview.mp4"
-              poster="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
-                <rect width='100%' height='100%' fill='%23222222'/>
-                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                      fill='%23cccccc' font-size='24'>
-                  Добавьте project-6-preview.mp4 в assets
-                </text>
-              </svg>"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-6-preview.mp4 в assets</text></svg>"
               muted playsinline preload="metadata"></video>
           </a>
           <h3 class="card-title">Проект 6</h3>
           <span class="tag">Illustration</span>
         </article>
       </div>
-    </section>
-
-    <!-- О СЕБЕ -->
-    <section id="about" class="section container">
-      <h2>О себе</h2>
-      <p>2–3 предложения о том, что вы делаете и где сильны.</p>
-      <ul class="chips">
-        <li>Figma</li><li>After Effects</li><li>Photoshop</li>
-        <li>HTML/CSS</li><li>JavaScript</li>
-      </ul>
-    </section>
-
-    <!-- КОНТАКТЫ -->
-    <section id="contact" class="section container">
-      <h2>Контакты</h2>
-      <ul class="links">
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
-        <li><a href="https://t.me/yourhandle" target="_blank" rel="noopener">Telegram</a></li>
-        <li><a href="https://www.behance.net/your" target="_blank" rel="noopener">Behance</a></li>
-        <li><a href="https://github.com/your" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-
-      <form id="contactForm" class="form">
-        <label>Email <input type="email" name="email" required></label>
-        <label>Сообщение <textarea name="message" rows="4" required></textarea></label>
-        <button class="btn" type="submit">Отправить</button>
-        <p class="muted">Демо-форма. Подключим отправку позже.</p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <small>© <span id="year"></span> Ваше имя</small>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    </sectio
