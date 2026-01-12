@@ -16,6 +16,9 @@
         <a href="#work">Портфолио</a>
         <a href="#about">О себе</a>
         <a href="#contact">Контакты</a>
+        <button class="edit-toggle" type="button" onclick="toggleEdit()">
+          Редактировать текст
+        </button>
       </div>
     </nav>
   </header>
@@ -28,9 +31,13 @@
         <div class="hero-photo" aria-hidden="true"></div>
 
         <div class="hero-text">
-          <h1>Egor Sukharev — <span class="accent">motion designer</span></h1>
-          <p class="muted role">Motion designer</p>
-          <p class="muted hero-desc">
+          <h1 data-editable="true" data-key="hero-title">
+            Egor Sukharev — <span class="accent">motion designer</span>
+          </h1>
+          <p class="muted role" data-editable="true" data-key="hero-role">
+            Motion designer
+          </p>
+          <p class="muted hero-desc" data-editable="true" data-key="hero-desc">
             Делаю анимацию, которая помогает продукту говорить понятнее.<br>
             Собираю сложные смыслы в простые визуальные сценарии.<br>
             Работаю с брендами и сервисами, ориентированными на цифровую среду.<br>
@@ -46,8 +53,10 @@
 
     <!-- ПОРТФОЛИО: 6 карточек -->
     <section id="work" class="section container">
-      <h2>Портфолио</h2>
-      <p class="muted">Наведи — превью играет. Клик — откроет видео в новой вкладке.</p>
+      <h2 data-editable="true" data-key="work-title">Портфолио</h2>
+      <p class="muted" data-editable="true" data-key="work-subtitle">
+        Наведи — превью играет. Клик — откроет видео в новой вкладке.
+      </p>
 
       <div class="grid">
         <!-- 1. РЕАЛЬНЫЙ ПРОЕКТ -->
@@ -59,8 +68,8 @@
                      muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 1</h3>
-          <span class="tag">UI/UX</span>
+          <h3 class="card-title" data-editable="true" data-key="project-1-title">Проект 1</h3>
+          <span class="tag" data-editable="true" data-key="project-1-tag">UI/UX</span>
         </article>
 
         <!-- 2–6. ЗАГЛУШКИ ПОД БУДУЩИЕ ВИДЕО -->
@@ -73,8 +82,8 @@
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 2</h3>
-          <span class="tag">Motion</span>
+          <h3 class="card-title" data-editable="true" data-key="project-2-title">Проект 2</h3>
+          <span class="tag" data-editable="true" data-key="project-2-tag">Motion</span>
         </article>
 
         <article class="card">
@@ -86,8 +95,8 @@
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 3</h3>
-          <span class="tag">Branding</span>
+          <h3 class="card-title" data-editable="true" data-key="project-3-title">Проект 3</h3>
+          <span class="tag" data-editable="true" data-key="project-3-tag">Branding</span>
         </article>
 
         <article class="card">
@@ -99,8 +108,8 @@
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 4</h3>
-          <span class="tag">Web</span>
+          <h3 class="card-title" data-editable="true" data-key="project-4-title">Проект 4</h3>
+          <span class="tag" data-editable="true" data-key="project-4-tag">Web</span>
         </article>
 
         <article class="card">
@@ -112,8 +121,8 @@
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 5</h3>
-          <span class="tag">3D</span>
+          <h3 class="card-title" data-editable="true" data-key="project-5-title">Проект 5</h3>
+          <span class="tag" data-editable="true" data-key="project-5-tag">3D</span>
         </article>
 
         <article class="card">
@@ -125,31 +134,37 @@
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title">Проект 6</h3>
-          <span class="tag">Illustration</span>
+          <h3 class="card-title" data-editable="true" data-key="project-6-title">Проект 6</h3>
+          <span class="tag" data-editable="true" data-key="project-6-tag">Illustration</span>
         </article>
       </div>
     </section>
 
     <!-- О СЕБЕ -->
     <section id="about" class="section container">
-      <h2>О себе</h2>
-      <p>2–3 предложения о том, что вы делаете и где сильны.</p>
+      <h2 data-editable="true" data-key="about-title">О себе</h2>
+      <p data-editable="true" data-key="about-text">
+        2–3 предложения о том, что вы делаете и где сильны. Этот текст тоже можно менять
+        в режиме редактирования прямо на сайте, а затем перенести в код при желании.
+      </p>
       <ul class="chips">
-        <li>Figma</li><li>After Effects</li><li>Photoshop</li>
-        <li>HTML/CSS</li><li>JavaScript</li>
+        <li data-editable="true" data-key="skill-1">Figma</li>
+        <li data-editable="true" data-key="skill-2">After Effects</li>
+        <li data-editable="true" data-key="skill-3">Photoshop</li>
+        <li data-editable="true" data-key="skill-4">HTML/CSS</li>
+        <li data-editable="true" data-key="skill-5">JavaScript</li>
       </ul>
     </section>
 
     <!-- КОНТАКТЫ -->
     <section id="contact" class="section container">
-      <h2>Контакты</h2>
+      <h2 data-editable="true" data-key="contact-title">Контакты</h2>
       <ul class="links">
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
-        <li><a href="https://t.me/egsukharev" target="_blank" rel="noopener">Telegram</a></li>
-        <li><a href="https://t.me/motion_points" target="_blank" rel="noopener">Telegram-канал motion_points</a></li>
-        <li><a href="https://www.behance.net/your" target="_blank" rel="noopener">Behance</a></li>
-        <li><a href="https://github.com/your" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:you@example.com" data-editable="true" data-key="contact-email">you@example.com</a></li>
+        <li><a href="https://t.me/egsukharev" target="_blank" rel="noopener" data-editable="true" data-key="contact-tg">Telegram</a></li>
+        <li><a href="https://t.me/motion_points" target="_blank" rel="noopener" data-editable="true" data-key="contact-tg-channel">Telegram-канал motion_points</a></li>
+        <li><a href="https://www.behance.net/your" target="_blank" rel="noopener" data-editable="true" data-key="contact-behance">Behance</a></li>
+        <li><a href="https://github.com/your" target="_blank" rel="noopener" data-editable="true" data-key="contact-github">GitHub</a></li>
       </ul>
 
       <form id="contactForm" class="form">
