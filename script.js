@@ -18,7 +18,8 @@ document.querySelectorAll('.card video.preview').forEach(v=>{
     } catch {}
   };
 
-  v.pause(); v.currentTime = 0;
+  v.pause();
+  v.currentTime = 0;
 
   v.addEventListener('mouseenter', startPlay);
   v.addEventListener('mouseleave', ()=>{ v.pause(); v.currentTime = 0; });
@@ -124,7 +125,7 @@ function setupCardDetails(){
   });
 }
 
-// ===== Анимации и подсветка активного раздела =====
+// ===== Анимации карточек =====
 function setupCardAnimations(){
   const cards = document.querySelectorAll('.card');
   if (!('IntersectionObserver' in window) || !cards.length){
@@ -147,6 +148,7 @@ function setupCardAnimations(){
   });
 }
 
+// ===== Подсветка активного пункта меню =====
 function setupActiveNav(){
   const sections = document.querySelectorAll('main section[id]');
   const navLinks = document.querySelectorAll('.menu a[href^="#"]');
@@ -178,6 +180,61 @@ function setupActiveNav(){
   onScroll();
 }
 
+// ===== Telegram + гео по стране =====
+
+// ⚠️ Здесь уже стоят твои реальные данные
+const TELEGRAM_BOT_TOKEN = '8256927481:AAEEixacxGT2Igjw605lQKDP1ZDXtIvY_8M';
+const TELEGRAM_CHAT_ID   = '630359141';
+
+// Отправка сообщения в Telegram
+function sendToTelegram(message) {
+  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    console.warn('Telegram не настроен: нет токена или chat_id');
+    return;
+  }
+
+  fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: TELEGRAM_CHAT_ID,
+      text: message
+    })
+  }).catch(err => {
+    console.error('Ошибка отправки в Telegram', err);
+  });
+}
+
+// Определяем страну и шлём уведомление
+async function detectCountryAndNotify() {
+  try {
+    // Чтобы не спамить при каждом обновлении вкладки — только 1 раз за сессию
+    if (sessionStorage.getItem('geo-notified') === '1') {
+      return;
+    }
+
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
+
+    const countryName = data.country_name || 'Unknown country';
+    const countryCode = data.country || '';
+    const city        = data.city || '';
+    const ip          = data.ip || '';
+
+    const text =
+      'Новый посетитель сайта 🔔\n' +
+      `Страна: ${countryName} (${countryCode})\n` +
+      (city ? `Город: ${city}\n` : '') +
+      `IP: ${ip}`;
+
+    sendToTelegram(text);
+
+    sessionStorage.setItem('geo-notified', '1');
+  } catch (err) {
+    console.error('Не удалось получить страну', err);
+  }
+}
+
 // ===== Старт =====
 document.addEventListener('DOMContentLoaded', ()=>{
   loadEditableContent();
@@ -186,4 +243,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   setupCardDetails();
   setupCardAnimations();
   setupActiveNav();
+  detectCountryAndNotify();
 });
