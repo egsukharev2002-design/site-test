@@ -32,7 +32,7 @@
 
         <div class="hero-text">
           <h1 data-editable="true" data-key="hero-title">
-            Egor Sukharev — <span class="accent">motion designer</span>
+            Egor Sukharev<br><span class="accent">motion designer</span>
           </h1>
           <p class="muted role" data-editable="true" data-key="hero-role">
             Motion designer
@@ -59,8 +59,8 @@
       </p>
 
       <div class="grid">
-        <!-- 1. РЕАЛЬНЫЙ ПРОЕКТ -->
-        <article class="card">
+        <!-- 1. ЯНДЕКС ЛАВКА -->
+        <article class="card" data-type="ai">
           <a href="assets/project-1-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
@@ -68,25 +68,45 @@
                      muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title" data-editable="true" data-key="project-1-title">Проект 1</h3>
-          <span class="tag" data-editable="true" data-key="project-1-tag">UI/UX</span>
+          <h3 class="card-title" data-editable="true" data-key="project-1-title">Яндекс Лавка</h3>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-1-tags">
+              <span class="tag">AI</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-1-details">
+            Короткое описание проекта: задача, идея и формат ролика. Можно написать,
+            какую роль вы выполняли и какой был результат.
+          </p>
         </article>
 
-        <!-- 2–6. ЗАГЛУШКИ ПОД БУДУЩИЕ ВИДЕО -->
-        <article class="card">
+        <!-- 2. RSQUAD -->
+        <article class="card" data-type="motion">
           <a href="assets/project-2-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
                 src="assets/project-2-preview.mp4"
-                poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23222222'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cccccc' font-size='20'>Добавьте project-2-preview.mp4 в assets</text></svg>"
                 muted playsinline preload="metadata"></video>
             </div>
           </a>
-          <h3 class="card-title" data-editable="true" data-key="project-2-title">Проект 2</h3>
-          <span class="tag" data-editable="true" data-key="project-2-tag">Motion</span>
+          <h3 class="card-title" data-editable="true" data-key="project-2-title">RSQUAD</h3>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-2-tags">
+              <span class="tag">Motion</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-2-details">
+            Здесь можно написать пару предложений о проекте RSQUAD: формат, платформа,
+            цели анимации и что было важным в процессе.
+          </p>
         </article>
 
-        <article class="card">
+        <!-- 3. ПРОЕКТ 3 -->
+        <article class="card" data-type="branding">
           <a href="assets/project-3-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
@@ -96,10 +116,21 @@
             </div>
           </a>
           <h3 class="card-title" data-editable="true" data-key="project-3-title">Проект 3</h3>
-          <span class="tag" data-editable="true" data-key="project-3-tag">Branding</span>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-3-tags">
+              <span class="tag">Branding</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-3-details">
+            Описание брендингового проекта: стиль, задачи, где использовалась анимация
+            и какие элементы айдентики вы делали.
+          </p>
         </article>
 
-        <article class="card">
+        <!-- 4. ПРОЕКТ 4 -->
+        <article class="card" data-type="web">
           <a href="assets/project-4-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
@@ -109,10 +140,21 @@
             </div>
           </a>
           <h3 class="card-title" data-editable="true" data-key="project-4-title">Проект 4</h3>
-          <span class="tag" data-editable="true" data-key="project-4-tag">Web</span>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-4-tags">
+              <span class="tag">Web</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-4-details">
+            Веб-проект: анимация интерфейсов, микровзаимодействия, промо-экраны или
+            онбординги для продукта.
+          </p>
         </article>
 
-        <article class="card">
+        <!-- 5. ПРОЕКТ 5 -->
+        <article class="card" data-type="3d">
           <a href="assets/project-5-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
@@ -122,10 +164,21 @@
             </div>
           </a>
           <h3 class="card-title" data-editable="true" data-key="project-5-title">Проект 5</h3>
-          <span class="tag" data-editable="true" data-key="project-5-tag">3D</span>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-5-tags">
+              <span class="tag">3D</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-5-details">
+            3D-проект: стилизация, рендер, симуляции, интеграция 3D-графики в ролики
+            или интерфейсы.
+          </p>
         </article>
 
-        <article class="card">
+        <!-- 6. ПРОЕКТ 6 -->
+        <article class="card" data-type="illustration">
           <a href="assets/project-6-preview.mp4" target="_blank" rel="noopener">
             <div class="card-media">
               <video class="preview"
@@ -135,7 +188,17 @@
             </div>
           </a>
           <h3 class="card-title" data-editable="true" data-key="project-6-title">Проект 6</h3>
-          <span class="tag" data-editable="true" data-key="project-6-tag">Illustration</span>
+          <div class="tag-row">
+            <div class="tag-list" data-editable="true" data-key="project-6-tags">
+              <span class="tag">Illustration</span>
+            </div>
+            <button class="tag-add-btn" type="button" title="Добавить тег">+</button>
+          </div>
+          <button class="more-btn" type="button">Подробнее</button>
+          <p class="card-details" data-editable="true" data-key="project-6-details">
+            Иллюстративный проект: персонажи, сцены, обложки, интеграция иллюстраций
+            в motion-графику.
+          </p>
         </article>
       </div>
     </section>
@@ -144,15 +207,15 @@
     <section id="about" class="section container">
       <h2 data-editable="true" data-key="about-title">О себе</h2>
       <p data-editable="true" data-key="about-text">
-        2–3 предложения о том, что вы делаете и где сильны. Этот текст тоже можно менять
-        в режиме редактирования прямо на сайте, а затем перенести в код при желании.
+        2–3 предложения о том, что вы делаете и где сильны. Этот текст можно менять
+        в режиме редактирования прямо на сайте, а затем при желании перенести в код.
       </p>
       <ul class="chips">
         <li data-editable="true" data-key="skill-1">Figma</li>
         <li data-editable="true" data-key="skill-2">After Effects</li>
         <li data-editable="true" data-key="skill-3">Photoshop</li>
-        <li data-editable="true" data-key="skill-4">HTML/CSS</li>
-        <li data-editable="true" data-key="skill-5">JavaScript</li>
+        <li data-editable="true" data-key="skill-4">Blender</li>
+        <li data-editable="true" data-key="skill-5">AI</li>
       </ul>
     </section>
 
